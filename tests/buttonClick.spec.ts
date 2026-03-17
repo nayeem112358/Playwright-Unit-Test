@@ -8,7 +8,7 @@ test("Button click test", async ({ page }) => {
   await page.getByRole("button", { name: "Right Click Me" }).click({ button: "right" });
   const rightClickMessage = page.locator("#rightClickMessage");
   await expect(rightClickMessage).toContainText("right click");
-  await page.getByRole("button", { name: "Click Me", exact: true }).click();
+  await page.getByRole("button", { name: "Click Me"}).nth(2).click();
   const normalClickMessage = page.locator("#dynamicClickMessage");
   await expect(normalClickMessage).toContainText("dynamic click");
   await page.pause();

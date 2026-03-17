@@ -1,3 +1,4 @@
+import { fa } from '@faker-js/faker';
 import { defineConfig, devices } from '@playwright/test';
 
 /**
@@ -30,7 +31,8 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     video: 'on-first-retry',
-    screenshot: 'only-on-failure'
+    screenshot: 'only-on-failure',
+    headless:false
   },
 
   /* Configure projects for major browsers */
